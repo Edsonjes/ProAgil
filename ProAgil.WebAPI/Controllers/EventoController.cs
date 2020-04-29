@@ -1,17 +1,17 @@
-
-using Microsoft.AspNetCore.Mvc;
-using ProAgil.Repository;
-using Microsoft.AspNetCore.Http;
-using System.Threading.Tasks;
-using ProAgil.Domain;
-using System.Threading.Tasks;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
 using System;
-using System.Web.Http;
-using AutoMapper;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using AutoMapper;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using ProAgil.Domain;
+using ProAgil.Repository;
 using ProAgil.WebAPI.Dtos;
+
+
 
 namespace ProAgil.WebAPI.Controllers
 
@@ -35,26 +35,58 @@ namespace ProAgil.WebAPI.Controllers
             }
 
         [HttpGet]
-        public async Task< IActionResult> Get () 
+        public async Task<IActionResult> Get() 
         {
             try
             {
                 var eventos = await _repo.GetAllEventoAsync(true);
                 var results = _mapper.Map <EventosDtos[]>(eventos);
 
-                 return Ok( results) ;
+                 return  Ok( results) ;
                 
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
                 
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Banco de dados Falhou");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, $"Banco de dados Falhou {ex.Message}");
             }
 
         }
 
-         [HttpGet("{EventoId}")]
-        public async Task< IActionResult> Get (int EventoId) 
+         [HttpPost("upload")]
+        public async Task<IActionResult> Upload()
+        {
+            try
+            {
+                var file = Request.Form.Files[0];
+                var folderName = Path.Combine("Resourcers", "Images");
+                var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
+
+                if (file.Length > 0)
+                {
+                    var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName;
+                    var fullPath = Path.Combine(pathToSave, fileName.Replace("\"", " ").Trim());
+
+                    using (var stream = new FileStream(fullPath, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                    }
+                }
+
+                return Ok();
+            }
+            catch (System.Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, $"Banco Dados Falhou {ex.Message}");
+            }
+
+            return BadRequest("Erro ao tentar realizar upload");
+        }
+       
+
+
+       [HttpGet("{EventoId}")]
+        public async Task<IActionResult> Get (int EventoId) 
         {
             try
             {

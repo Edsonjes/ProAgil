@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj": {}
+    "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebApi\\ProAgil.WebAPI.csproj": {}
   },
   "projects": {
     "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.Domain\\ProAgil.Domain.csproj": {
@@ -41,6 +41,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -97,6 +101,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[2.2.3, )"
@@ -120,14 +128,14 @@
         }
       }
     },
-    "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj": {
+    "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebApi\\ProAgil.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebApi\\ProAgil.WebAPI.csproj",
         "projectName": "ProAgil.WebAPI",
-        "projectPath": "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj",
+        "projectPath": "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebApi\\ProAgil.WebAPI.csproj",
         "packagesPath": "C:\\Users\\Edson Júnior\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
