@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebApi\\ProAgil.WebAPI.csproj": {}
+    "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj": {}
   },
   "projects": {
     "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.Domain\\ProAgil.Domain.csproj": {
@@ -17,14 +17,12 @@
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Edson Júnior\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Edson Júnior\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -73,14 +71,12 @@
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Edson Júnior\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Edson Júnior\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -128,27 +124,25 @@
         }
       }
     },
-    "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebApi\\ProAgil.WebAPI.csproj": {
+    "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebApi\\ProAgil.WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj",
         "projectName": "ProAgil.WebAPI",
-        "projectPath": "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebApi\\ProAgil.WebAPI.csproj",
+        "projectPath": "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebAPI\\ProAgil.WebAPI.csproj",
         "packagesPath": "C:\\Users\\Edson Júnior\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebApi\\obj\\",
+        "outputPath": "C:\\Users\\Edson Júnior\\Documents\\Aplicativos\\DotNetCore\\ProAgil.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Edson Júnior\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Edson Júnior\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
