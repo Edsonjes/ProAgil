@@ -41,7 +41,7 @@ namespace ProAgil.WebAPI.Controllers
     
     public async Task<IActionResult> GetUser()
     {
-        return Ok(new UserDtos());
+        return  Ok(new UserDtos());
     }
 
     [HttpPost("Register")]

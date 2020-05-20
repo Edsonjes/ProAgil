@@ -35,6 +35,7 @@ namespace ProAgil.WebAPI.Controllers
             }
 
         [HttpGet]
+        
         public async Task<IActionResult> Get() 
         {
             try
@@ -53,7 +54,7 @@ namespace ProAgil.WebAPI.Controllers
 
         }
 
-         [HttpPost("upload")]
+        [HttpPost("upload")]
         public async Task<IActionResult> Upload()
         {
             try
@@ -82,10 +83,11 @@ namespace ProAgil.WebAPI.Controllers
 
             return BadRequest("Erro ao tentar realizar upload");
         }
-       
 
 
-       [HttpGet("{EventoId}")]
+
+        [HttpGet("{EventoId}")]
+      
         public async Task<IActionResult> Get (int EventoId) 
         {
             try
@@ -154,8 +156,31 @@ namespace ProAgil.WebAPI.Controllers
         {
             try
             {
+              
+
+
+
                 var Evento = await _repo.GetEventoAsyncById (EventoId, false);
                 if(Evento == null) return NotFound();
+
+                  var idLotes = new List<int>();
+                var idRedesSociais = new List<int>();
+
+                Model.Lotes.ForEach(item => idLotes.Add(item.id));
+                Model.RedesSociais.ForEach(item => idRedesSociais.Add(item.Id));
+
+                var lotes = Evento.Lotes.Where(
+                    lote => !idLotes.Contains(lote.id)
+                ).ToArray();
+
+                var redesSociais = Evento.RedesSociais.Where(
+                    rede => !idLotes.Contains(rede.Id)
+                ).ToArray();
+
+                if (lotes.Length > 0) _repo.DeleteRange(lotes);
+                if (redesSociais.Length > 0) _repo.DeleteRange(redesSociais);
+
+               
 
                _mapper.Map(Model, Evento);
                
